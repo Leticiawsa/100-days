@@ -1,0 +1,193 @@
+/* ===== BASE ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Quicksand', sans-serif;
+  min-height: 100vh;
+  background: linear-gradient(160deg, #f3e8ff 0%, #ede4fb 40%, #e6d9f8 100%);
+  color: #4b3a5a;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* ===== FUNDO DECORATIVO ===== */
+.bg-decor {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.bear, .cloud, .star {
+  position: absolute;
+  font-size: 3rem;
+  opacity: 0.35;
+  animation: float 8s ease-in-out infinite;
+}
+
+.b1 { top: 10%; left: 8%; font-size: 4rem; animation-delay: 0s; }
+.b2 { bottom: 12%; right: 8%; font-size: 3.5rem; animation-delay: 2s; }
+.c1 { top: 18%; right: 12%; font-size: 3rem; animation-delay: 1s; }
+.c2 { bottom: 20%; left: 10%; font-size: 2.5rem; animation-delay: 3s; }
+.s1 { top: 40%; left: 4%; font-size: 1.8rem; animation-delay: 1.5s; }
+.s2 { top: 55%; right: 6%; font-size: 1.8rem; animation-delay: 2.5s; }
+
+@keyframes float {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-20px) rotate(5deg); }
+}
+
+/* ===== CONTAINER PRINCIPAL ===== */
+.container {
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem 1.5rem;
+}
+
+.eyebrow {
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  color: #9b7bb8;
+  font-weight: 600;
+  margin-bottom: 0.8rem;
+}
+
+.title {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #6b4c8a;
+  line-height: 1.3;
+}
+
+.title span {
+  display: block;
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-weight: 400;
+  color: #a97fd1;
+  font-size: 2.6rem;
+}
+
+.subtitle {
+  margin-top: 0.8rem;
+  color: #7d6693;
+  font-size: 1.05rem;
+}
+
+/* ===== CONTAGEM ===== */
+.countdown {
+  display: flex;
+  gap: 1rem;
+  margin: 3rem 0 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.time-box {
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  border-radius: 20px;
+  padding: 1.3rem 1.4rem;
+  min-width: 90px;
+  box-shadow: 0 8px 24px rgba(150, 110, 190, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.time-box:hover {
+  transform: translateY(-5px);
+}
+
+.number {
+  display: block;
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #7c4fa3;
+}
+
+.label {
+  display: block;
+  margin-top: 0.3rem;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #9b7bb8;
+}
+
+.footer-msg {
+  margin-top: 1.5rem;
+  font-size: 0.95rem;
+  color: #8a729f;
+}
+
+/* ===== TELA FINAL — "O DIA" ===== */
+.final {
+  background: linear-gradient(160deg, #e6d3fb 0%, #d8b9f5 50%, #c9a0ee 100%);
+}
+
+.hidden {
+  display: none !important;
+}
+
+#confetti-canvas {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.final-content {
+  position: relative;
+  z-index: 2;
+  animation: pop 1s ease;
+}
+
+.final-bear {
+  font-size: 2.5rem;
+  display: block;
+  margin-bottom: 1rem;
+  animation: float 3s ease-in-out infinite;
+}
+
+.final-title {
+  font-size: 5rem;
+  font-weight: 700;
+  color: #ffffff;
+  text-shadow: 0 0 30px rgba(255, 255, 255, 0.8), 0 8px 20px rgba(124, 79, 163, 0.4);
+  letter-spacing: 3px;
+}
+
+.final-subtitle {
+  margin-top: 1rem;
+  font-size: 1.3rem;
+  color: #4b3a5a;
+  font-weight: 600;
+}
+
+@keyframes pop {
+  0% { transform: scale(0.7); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+/* ===== RESPONSIVO ===== */
+@media (max-width: 480px) {
+  .title { font-size: 1.9rem; }
+  .title span { font-size: 2.1rem; }
+  .time-box { min-width: 70px; padding: 1rem; }
+  .number { font-size: 1.8rem; }
+  .final-title { font-size: 3.2rem; }
+}
