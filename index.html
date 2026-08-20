@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nosso Dia Especial 🧸</title>
+  <link rel="icon" href="https://twemoji.maxcdn.com/v/latest/72x72/1f9f8.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Fundo decorativo -->
+  <div class="bg-decor">
+    <span class="bear b1">🧸</span>
+    <span class="bear b2">🧸</span>
+    <span class="cloud c1">☁️</span>
+    <span class="cloud c2">☁️</span>
+    <span class="star s1">✨</span>
+    <span class="star s2">✨</span>
+  </div>
+
+  <!-- TELA DA CONTAGEM REGRESSIVA -->
+  <main id="countdown-view" class="container">
+    <p class="eyebrow">18 de agosto → 25 de novembro</p>
+    <h1 class="title">Nossa Contagem <span>de 100 dias</span> 🧸</h1>
+    <p class="subtitle">Cada dia mais perto de vocês dois</p>
+
+    <div class="countdown" id="countdown" data-target="2026-11-25T00:00:00">
+      <div class="time-box">
+        <span class="number" id="days">00</span>
+        <span class="label">dias</span>
+      </div>
+      <div class="time-box">
+        <span class="number" id="hours">00</span>
+        <span class="label">horas</span>
+      </div>
+      <div class="time-box">
+        <span class="number" id="minutes">00</span>
+        <span class="label">min</span>
+      </div>
+      <div class="time-box">
+        <span class="number" id="seconds">00</span>
+        <span class="label">seg</span>
+      </div>
+    </div>
+
+    <p class="footer-msg">Feito com carinho, um dia de cada vez 💜</p>
+  </main>
+
+  <!-- TELA DO DIA FINAL (fica escondida até acabar a contagem) -->
+  <main id="final-view" class="container final hidden">
+    <canvas id="confetti-canvas"></canvas>
+    <div class="final-content">
+      <span class="final-bear">🧸💜🧸</span>
+      <h1 class="final-title">O DIA</h1>
+      <p class="final-subtitle">Hoje é o dia de vocês ✨</p>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
