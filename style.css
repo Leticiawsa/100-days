@@ -191,3 +191,23 @@ body {
   .number { font-size: 1.8rem; }
   .final-title { font-size: 3.2rem; }
 }
+/* ===== ÍCONE DE URSINHO (SVG) ===== */
+.bear-svg {
+  width: 100%;
+  height: 100%;
+  fill: #a97fd1;
+  color: #7c4fa3;
+}
+
+.bear.b1 .bear-svg,
+.bear.b2 .bear-svg {
+  width: 3.5rem;
+  height: 3.5rem;
+}
+
+.final-bear-svg {
+  width: 3.5rem;
+  height: 3.5rem;
+  fill: #ffffff;
+  color: #a97fd1;
+}
